@@ -3,6 +3,14 @@
 // Modular JavaScript with component loading
 // ==========================================
 
+// ========== CONFIGURATION ==========
+const CONFIG = {
+  whatsapp: {
+    number: '51987654321', // Cambia esto por tu número de WhatsApp (código país + número sin espacios)
+    defaultMessage: 'Hola! Estoy interesado en los productos de Patitas de Algodón.'
+  }
+};
+
 // ========== COMPONENTS MODULE ==========
 const Components = {
   async init() {
@@ -19,6 +27,9 @@ const Components = {
       const response = await fetch('components/header.html');
       const html = await response.text();
       headerPlaceholder.innerHTML = html;
+
+      // Initialize navigation after loading header
+      Navigation.setupMobileMenu();
     } catch (error) {
       console.error('Error loading header:', error);
     }
@@ -32,6 +43,10 @@ const Components = {
       const response = await fetch('components/footer.html');
       const html = await response.text();
       footerPlaceholder.innerHTML = html;
+
+      // Initialize footer after loading
+      Footer.updateCopyrightYear();
+      Footer.setupNewsletter();
     } catch (error) {
       console.error('Error loading footer:', error);
     }
@@ -245,13 +260,18 @@ const WhatsApp = {
   },
 
   setupWhatsAppLinks() {
-    // Update all WhatsApp links with proper formatting
+    // Update all WhatsApp links with the configured number
     const whatsappLinks = document.querySelectorAll('a[href*="wa.me"]');
 
     whatsappLinks.forEach(link => {
+      // Replace placeholder with actual number
+      const currentHref = link.getAttribute('href');
+      const newHref = currentHref.replace('yournumber', CONFIG.whatsapp.number);
+      link.setAttribute('href', newHref);
+
       link.addEventListener('click', (e) => {
         // You can add custom tracking or analytics here
-        console.log('WhatsApp link clicked');
+        console.log('WhatsApp link clicked:', CONFIG.whatsapp.number);
       });
     });
   },
@@ -273,13 +293,28 @@ const WhatsApp = {
     }
 
     return encodeURIComponent(message);
+  },
+
+  // Get WhatsApp URL with message
+  getWhatsAppURL(message = '') {
+    const msg = message || CONFIG.whatsapp.defaultMessage;
+    return `https://wa.me/${CONFIG.whatsapp.number}?text=${encodeURIComponent(msg)}`;
   }
 };
 
 // ========== FOOTER MODULE ==========
 const Footer = {
   init() {
+    this.updateCopyrightYear();
     this.setupNewsletter();
+  },
+
+  updateCopyrightYear() {
+    const yearElement = document.getElementById('copyright-year');
+    if (yearElement) {
+      const currentYear = new Date().getFullYear();
+      yearElement.textContent = currentYear;
+    }
   },
 
   setupNewsletter() {
@@ -358,12 +393,16 @@ document.addEventListener('DOMContentLoaded', async () => {
   await Components.init();
 
   // Then initialize all modules
-  Navigation.init();
+  Navigation.setupScrollHeader();
+  Navigation.setupSmoothScroll();
   Animations.init();
   Product.init();
   Interactions.init();
+
+  // Initialize WhatsApp after components are loaded
   WhatsApp.init();
-  Footer.init();
+
+  // Footer is initialized inside Components.loadFooter()
 
   // Log initialization
   console.log('Patitas de Algodón - Website initialized');
