@@ -861,6 +861,19 @@ footer img[alt="Logo"] {
   }
 }
 
+/* ========== GALLERY IMAGE ========== */
+.gallery-image {
+  width: 70%;
+  margin: 0 auto;
+  border-radius: 1.5rem;
+}
+
+@media (max-width: 767px) {
+  .gallery-image {
+    width: 100%;
+  }
+}
+
 /* ========== SHADOW UTILITIES ========== */
 .soft-shadow {
   box-shadow: var(--shadow-ambient);
