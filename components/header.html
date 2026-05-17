@@ -1,0 +1,55 @@
+<!-- Navigation -->
+<nav id="main-nav" class="fixed top-0 w-full z-50 bg-surface/95 backdrop-blur-sm shadow-sm">
+  <div class="max-w-container-max mx-auto px-gutter md:px-20 flex justify-between items-center h-20">
+    <!-- Logo -->
+    <a href="index.html" class="flex items-center gap-2">
+      <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2EO-Fd1l66r8eSSPqHPABHkAQqDPfMCVqrkK4x29wFD7yD_gCNo6vOddKnJI22AR9mtDCY57f77AwbQ7YWcLSlIEZHZarpeKI4QLoAU0Na4RnndOINF56rAmVSzi4eMKb7YIrjle_YIkccO_UArfFrtB_gzpc4RIVvnaQDNu455vmc9xBY_BDM9vJQVJv6jKvs697aK1x_uQdycgH-257-RNvOZL8njzHBB9o4ViA8ASM6tx6NrOI9XpKL2TkdKlqc3PozC3wApsU" alt="Logo Patitas de Algodón" class="h-10 w-auto">
+      <span class="text-headline-md font-bold logo-text">Patitas de Algodón</span>
+    </a>
+
+    <!-- Desktop Menu - Centered -->
+    <div class="hidden md:flex items-center gap-12 absolute left-1/2 transform -translate-x-1/2">
+      <a href="catalogo.html" class="nav-link text-on-surface font-medium hover:text-primary transition-colors" data-page="catalogo">
+        Catálogo
+      </a>
+      <a href="index.html#personalizacion" class="nav-link text-on-surface font-medium hover:text-primary transition-colors">
+        Personalizar
+      </a>
+      <a href="#nosotros" class="nav-link text-on-surface font-medium hover:text-primary transition-colors">
+        Nosotros
+      </a>
+    </div>
+
+    <!-- Actions -->
+    <div class="flex items-center gap-4">
+      <a href="https://wa.me/yournumber" class="btn btn-primary hidden md:inline-flex">
+        WhatsApp
+      </a>
+
+      <!-- Mobile Hamburger -->
+      <button class="hamburger md:hidden" id="mobile-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="md:hidden">
+    <div class="flex flex-col py-4 px-gutter gap-2 bg-surface border-t border-outline-variant">
+      <a href="catalogo.html" class="nav-link text-on-surface font-medium hover:text-primary transition-colors py-2" data-page="catalogo">
+        Catálogo
+      </a>
+      <a href="index.html#personalizacion" class="nav-link text-on-surface font-medium hover:text-primary transition-colors py-2">
+        Personalizar
+      </a>
+      <a href="#nosotros" class="nav-link text-on-surface font-medium hover:text-primary transition-colors py-2">
+        Nosotros
+      </a>
+      <a href="https://wa.me/yournumber" class="btn btn-primary mt-2 justify-center">
+        WhatsApp
+      </a>
+    </div>
+  </div>
+</nav>

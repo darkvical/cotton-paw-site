@@ -1,0 +1,36 @@
+schema: spec-driven
+language: es
+
+context: |
+  E-commerce de accesorios premium para mascotas (Patitas de Algodón).
+
+  Stack: HTML5, Tailwind CSS CDN, Bodoni Moda (Google Fonts), Material Symbols, Vanilla JS.
+
+  ⚠️ CRÍTICO - Componentes Compartidos:
+  - Header: components/header.html
+  - Footer: components/footer.html
+  - TODA vista HTML DEBE usar placeholders:
+    <div id="header-placeholder"></div>
+    <div id="footer-placeholder"></div>
+  - Los componentes se cargan automáticamente vía js/main.js
+  - NUNCA duplicar navegación o footer inline
+
+  Diseño: Primary #ba0037, Secondary #006874, Surface #fff8f7
+  Tipografía: Bodoni Moda (NO Outfit)
+  Iconos: Material Symbols (Google Fonts) ÚNICAMENTE
+
+  Ver CLAUDE.md en la raíz del proyecto para documentación completa.
+
+rules:
+  design:
+    - Header y footer están en components/ separados, no proponer código inline
+    - SOLO usar colores definidos en js/tailwind.config.js (NO inventar colores hex)
+    - Consultar paleta completa en tailwind.config.js antes de elegir colores
+    - SOLO usar Material Symbols (Google Fonts) - NO Font Awesome, Heroicons, MUI components, etc.
+  tasks:
+    - Nuevas vistas HTML DEBEN incluir header-placeholder y footer-placeholder
+    - Siempre incluir js/main.js al final del body
+    - SOLO usar clases de color de Tailwind del proyecto (text-primary, bg-secondary, etc.)
+    - Para iconos usar ÚNICAMENTE Material Symbols con clase .material-symbols-outlined
+  specs:
+    - Nuevas páginas deben seguir patrón de componentes compartidos

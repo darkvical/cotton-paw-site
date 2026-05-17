@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Placa Circular Premium | Patitas de Algodón</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "secondary": "#006874",
+                "surface-dim": "#f2d2d3",
+                "on-error": "#ffffff",
+                "on-background": "#281718",
+                "primary-fixed": "#ffdadb",
+                "surface-container-highest": "#fbdbdb",
+                "on-primary": "#ffffff",
+                "background": "#fff8f7",
+                "surface-container": "#ffe9e9",
+                "surface-container-high": "#ffe1e2",
+                "surface-tint": "#be0038",
+                "tertiary-fixed-dim": "#afc9e7",
+                "error": "#ba1a1a",
+                "outline": "#916f70",
+                "on-tertiary": "#ffffff",
+                "on-surface": "#281718",
+                "surface-container-lowest": "#ffffff",
+                "primary-fixed-dim": "#ffb2b6",
+                "on-secondary-fixed": "#001f24",
+                "secondary-fixed": "#96f0ff",
+                "on-tertiary-fixed": "#001d33",
+                "surface": "#fff8f7",
+                "on-secondary-fixed-variant": "#004f57",
+                "outline-variant": "#e5bdbe",
+                "on-primary-container": "#fffbff",
+                "on-error-container": "#93000a",
+                "primary-container": "#e41849",
+                "secondary-fixed-dim": "#79d4e2",
+                "inverse-primary": "#ffb2b6",
+                "surface-bright": "#fff8f7",
+                "primary": "#ba0037",
+                "tertiary": "#455e78",
+                "secondary-container": "#93eefc",
+                "inverse-on-surface": "#ffedec",
+                "surface-variant": "#fbdbdb",
+                "error-container": "#ffdad6",
+                "on-secondary-container": "#006d79",
+                "tertiary-fixed": "#cfe5ff",
+                "tertiary-container": "#5e7791",
+                "on-secondary": "#ffffff",
+                "on-tertiary-fixed-variant": "#304961",
+                "on-tertiary-container": "#fdfcff",
+                "inverse-surface": "#3f2b2c",
+                "surface-container-low": "#fff0f0",
+                "on-surface-variant": "#5c3f41",
+                "on-primary-fixed": "#40000d",
+                "on-primary-fixed-variant": "#920029"
+            },
+            "borderRadius": {
+                "DEFAULT": "1rem",
+                "lg": "2rem",
+                "xl": "3rem",
+                "full": "9999px"
+            },
+            "spacing": {
+                "section-gap-mobile": "64px",
+                "margin-mobile": "20px",
+                "container-max": "1280px",
+                "section-gap-desktop": "120px",
+                "gutter": "24px",
+                "base": "8px"
+            },
+            "fontFamily": {
+                "body-md": ["Outfit"],
+                "headline-lg-mobile": ["Outfit"],
+                "headline-lg": ["Outfit"],
+                "display-lg-mobile": ["Outfit"],
+                "body-lg": ["Outfit"],
+                "label-md": ["Outfit"],
+                "headline-md": ["Outfit"],
+                "display-lg": ["Outfit"]
+            },
+            "fontSize": {
+                "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                "headline-lg-mobile": ["28px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                "headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                "display-lg-mobile": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                "label-md": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                "display-lg": ["56px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .organic-blob {
+            position: absolute;
+            z-index: -1;
+            filter: blur(80px);
+            opacity: 0.4;
+            border-radius: 100%;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .soft-shadow {
+            box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.04);
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- Organic Background Elements -->
+<div class="organic-blob bg-surface-container-highest w-[500px] h-[500px] -top-20 -left-20"></div>
+<div class="organic-blob bg-secondary-container w-[400px] h-[400px] top-[40%] -right-20"></div>
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-20 h-20 max-w-container-max mx-auto bg-transparent backdrop-blur-md bg-surface/10">
+<div class="font-headline-md text-headline-md font-bold text-primary">Patitas de Algodón</div>
+<div class="hidden md:flex items-center gap-10">
+<a class="text-primary font-bold border-b-2 border-primary pb-1 font-body-md text-body-md" href="#">Catálogo</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-300 font-body-md text-body-md" href="#">Personalizar</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-300 font-body-md text-body-md" href="#">Nosotros</a>
+</div>
+<button class="bg-primary-container text-on-primary-container px-6 py-3 rounded-full font-label-md text-label-md flex items-center gap-2 hover:scale-105 active:scale-95 transition-all duration-300">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">chat</span>
+            WhatsApp
+        </button>
+</nav>
+<main class="pt-32 pb-section-gap-desktop max-w-container-max mx-auto px-margin-mobile md:px-20">
+<!-- Breadcrumbs -->
+<nav class="flex items-center gap-2 mb-10 overflow-x-auto no-scrollbar whitespace-nowrap">
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors" href="#">Inicio</a>
+<span class="material-symbols-outlined text-on-surface-variant text-[16px]">chevron_right</span>
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors" href="#">Catálogo</a>
+<span class="material-symbols-outlined text-on-surface-variant text-[16px]">chevron_right</span>
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors" href="#">Placas</a>
+<span class="material-symbols-outlined text-on-surface-variant text-[16px]">chevron_right</span>
+<span class="text-primary font-label-md text-label-md font-bold">Placa Circular Premium</span>
+</nav>
+<!-- Product Hero Section -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+<!-- Gallery -->
+<div class="lg:col-span-7 flex flex-col gap-6">
+<div class="aspect-square overflow-hidden rounded-xl soft-shadow bg-surface-container-low group">
+<img alt="Placa Circular Premium" class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105" data-alt="A macro close-up of a luxurious circular pet tag made of polished gold-colored surgical steel, featuring a deep diamond-engraved name 'Bella' in an elegant serif font. The tag is attached to a premium braided brown leather collar, resting on a soft pastel yellow textured surface with gentle, warm lighting that highlights the metallic sheen and artisanal quality. The mood is sophisticated and warm, reflecting a luxury pet accessory brand's aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBavIC2oHbfjat9JyA7VZdnDKPD9lWo3_QkVvy-eaWWzKqVJ1ZgnXYA3KMsfFh1qcTaeOLpb-klOBIps8SZisyfiNOGBdCxFoSc37D6ctReHW63wmJhBKx1Qc0JoJkCPItM7lmQU5vmRr1LeclpCJCJ7oYlBC6E9tRq9GXG1B9BMp2Kohzo8t7SlNW4EvJEHimscAuJub16pdIitpE_3AweEe7rWVYphwv6oZw0twrsWgVYYJxbZqPwgZz9Rq3flodI9ATJ7PvRW4Bl"/>
+</div>
+<div class="grid grid-cols-4 gap-4">
+<div class="aspect-square rounded-lg overflow-hidden cursor-pointer border-2 border-primary transition-all soft-shadow">
+<img alt="Thumbnail 1" class="w-full h-full object-cover" data-alt="Close up of a gold circular pet tag on a leather collar." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQ_Jv8y8oQdl1Ui4NrjnEc_KmP0TMkH2vjJYtHCEs_a7E0qRjyYcSopE_r9U91aOjJUl6zFP1hO0ehMHRoREJfxe4iRLFTbdnjGMqRdN1pHrieRkc8LpztENMX1w-0cwFUUSDXeaLRZNwBVLzbBwyBWRTHLkpnz7Q8xHisywE93bfM3B9GxQvRIBUqq-WPwv7hjh8sdYQDBimL-8ijBepgjvrw1oHdVmTGHAC5KXuBOmMYVT3OuhQD_M4x5z000hE9GdzO1DOjb3wz"/>
+</div>
+<div class="aspect-square rounded-lg overflow-hidden cursor-pointer border-2 border-transparent hover:border-outline-variant transition-all soft-shadow bg-surface-container">
+<img alt="Thumbnail 2" class="w-full h-full object-cover" data-alt="A beautiful Golden Retriever wearing a circular gold tag sitting on a designer couch." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrjq5HQhgGi39mLia44M-r7oB7Q0nIODE2K0WyjdeTN81f2BP3CMFnTKQutpT5aRCKo4UEJG2f2xyv9Mq4XB6n7cpXzEUOAuFgt2anzkOKDobYFo-r9zhfy6tjQ1FAS0aBEAC8ZH3AMZVIPyHoKfE4_pKtzdGzPskp7kyp7nIIhLDmy_Sw_yqnDRSQDiPrG_qTUXhzNANgWdSWix9hFr4K6N8Q0VLNVcBycfi4PNyYQzbTbV72iiwVJuqeAET6o6FxyDC3C4F550TH"/>
+</div>
+<div class="aspect-square rounded-lg overflow-hidden cursor-pointer border-2 border-transparent hover:border-outline-variant transition-all soft-shadow bg-surface-container">
+<img alt="Thumbnail 3" class="w-full h-full object-cover" data-alt="Detail of the diamond engraving process on a metallic surface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuALIvc_By7BEM9LqixYhXwBXKOyN8FJICxeY1yiwpkz7TkHpjY7Rek3nykYFYKyvpjWp02Ygezk8W4muu3WX22fO1_zd509iEW-NspxKoGbD3htCtgfSQZ-AssZ_NK1JC8fHQkj8YuGzPkASD8BmCF3rbNoJvJkTWNt-ISA8tLg34NlTotPGrjddc-4DFkgidsX8WRD8g0UmjAGkKkVugMrbsdyfOI_781G_xttZKiUeDtKJIJvf5ra7yLT5GHh82Mob4cuvXqwqHyh"/>
+</div>
+<div class="aspect-square rounded-lg overflow-hidden cursor-pointer border-2 border-transparent hover:border-outline-variant transition-all soft-shadow bg-surface-container">
+<img alt="Thumbnail 4" class="w-full h-full object-cover" data-alt="Three different finishes of pet tags: silver, gold, and rose gold arranged artistically." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDegbMkplrkVgT-kvq_69FKrWEkpSUBYWg_-fDncnyqzgfRI2K-7K6-aE7A3rWoIJl0fMWM9nf9D1nCMEy2a_BFskFCFUAdyPGDFZyB6X37PfO9APTJeIKWxfzyvSAmG6uQfy5UCYnwTu5Nj0hqcJbAzKKtiEZW_6pNW4e1Yf8YYE8_Qd7dzQYcXL1TrkdiVxgjry4fYbqiIIYRTn4faf-4i4MnOTu_MJf9uI5bbEa4hS3kTmSgomxCPp0B_lhjabxRr-A-AR7xO3W"/>
+</div>
+</div>
+</div>
+<!-- Product Details -->
+<div class="lg:col-span-5 flex flex-col gap-8">
+<div class="flex flex-col gap-4">
+<span class="font-label-md text-label-md uppercase tracking-widest text-primary font-bold">Edición Artesanal</span>
+<h1 class="font-headline-lg text-headline-lg text-on-background">Placa Circular Premium</h1>
+<div class="flex items-center gap-4">
+<span class="font-headline-md text-headline-md text-secondary font-bold">S/ 45.00</span>
+<div class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full font-label-md text-label-md">
+                            Acero Quirúrgico
+                        </div>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                        Una joya artesanal diseñada para durar toda la vida. Grabado profundo con punta de diamante que garantiza que los datos de tu mascota nunca se borren. Material: Acero quirúrgico hipoalergénico.
+                    </p>
+</div>
+<!-- Customization Form -->
+<div class="glass-card p-8 rounded-lg soft-shadow flex flex-col gap-6">
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-on-surface-variant block">Nombre de tu mascota</label>
+<input class="w-full bg-[#F9F9B5]/30 border-none rounded-full py-4 px-6 font-body-md text-body-md focus:ring-2 focus:ring-primary-fixed transition-all placeholder:text-on-surface-variant/40" placeholder="Ej. Max, Luna, Toby..." type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-on-surface-variant block">Teléfono de contacto</label>
+<input class="w-full bg-[#F9F9B5]/30 border-none rounded-full py-4 px-6 font-body-md text-body-md focus:ring-2 focus:ring-primary-fixed transition-all placeholder:text-on-surface-variant/40" placeholder="987 654 321" type="tel"/>
+</div>
+<div class="space-y-4">
+<label class="font-label-md text-label-md text-on-surface-variant block">Material del acabado</label>
+<div class="flex gap-4">
+<button class="flex-1 py-3 px-2 rounded-full border-2 border-primary bg-primary-fixed/20 transition-all text-on-surface font-label-md text-label-md flex flex-col items-center gap-1 material-btn" onclick="selectMaterial(this)">
+<div class="w-4 h-4 rounded-full bg-[#FFD700] shadow-sm"></div>
+                                Oro
+                            </button>
+<button class="flex-1 py-3 px-2 rounded-full border-2 border-transparent bg-surface-container hover:bg-surface-container-high transition-all text-on-surface font-label-md text-label-md flex flex-col items-center gap-1 material-btn" onclick="selectMaterial(this)">
+<div class="w-4 h-4 rounded-full bg-[#E5E4E2] shadow-sm"></div>
+                                Plata
+                            </button>
+<button class="flex-1 py-3 px-2 rounded-full border-2 border-transparent bg-surface-container hover:bg-surface-container-high transition-all text-on-surface font-label-md text-label-md flex flex-col items-center gap-1 material-btn" onclick="selectMaterial(this)">
+<div class="w-4 h-4 rounded-full bg-[#B76E79] shadow-sm"></div>
+                                Rosé
+                            </button>
+</div>
+</div>
+<button class="w-full bg-[#ff325a] text-white py-5 rounded-full font-headline-md text-headline-md flex items-center justify-center gap-3 hover:scale-[1.03] active:scale-95 transition-all duration-300 shadow-lg shadow-[#ff325a]/20">
+<span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">chat</span>
+                        Pedir por WhatsApp
+                    </button>
+</div>
+<!-- Trust Badges -->
+<div class="grid grid-cols-3 gap-4 pt-4">
+<div class="flex flex-col items-center text-center gap-2">
+<div class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">front_hand</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant">Hecho a mano</span>
+</div>
+<div class="flex flex-col items-center text-center gap-2">
+<div class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">verified</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant">Grabado de por vida</span>
+</div>
+<div class="flex flex-col items-center text-center gap-2">
+<div class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">local_shipping</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant">Envío nacional</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Related Products Section -->
+<section class="mt-section-gap-desktop">
+<div class="flex justify-between items-end mb-12">
+<div class="space-y-2">
+<span class="font-label-md text-label-md text-primary font-bold uppercase tracking-widest">Nuestra Selección</span>
+<h2 class="font-headline-lg text-headline-lg text-on-background">También te podría encantar</h2>
+</div>
+<a class="hidden md:flex items-center gap-2 text-primary font-bold font-label-md text-label-md group" href="#">
+                    Ver catálogo completo
+                    <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-gutter">
+<!-- Related Item 1 -->
+<div class="flex flex-col gap-4 group cursor-pointer">
+<div class="aspect-[4/5] rounded-lg overflow-hidden soft-shadow bg-surface-container-low">
+<img alt="Collar de Cuero" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A premium leather pet collar in soft beige with rose gold hardware, showcased in a minimalist lifestyle setting with soft side lighting and a high-end luxury feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXcV8RnIBe9KtpgH-AmPm4DfgvcD3lmpr6aVz2ue2xboq5kumE7jLhMqqiXyNx2NKnlgWzQfC2c1klnfngByNlo4B5Fc5ZoTSbCxxz7F43iOd_-eaIisjDP_ZV3NOf5xDjM4YCxPCAsiSPdqJXf_TEK34mPhGO39N2RqsL4xnj1zAYS3L5XD1AM1CUj_ifUAFC2RZaIyLmWF359tpz_bGOX_BJaCPAl9iZyuhZZOb-VfPTfZoOvPBgya0umQ34RQuGrNE0hsUrTWI0"/>
+</div>
+<div class="text-center md:text-left">
+<h3 class="font-body-lg text-body-lg font-medium text-on-background">Collar de Cuero Soft</h3>
+<p class="font-label-md text-label-md text-secondary font-bold">S/ 85.00</p>
+</div>
+</div>
+<!-- Related Item 2 -->
+<div class="flex flex-col gap-4 group cursor-pointer">
+<div class="aspect-[4/5] rounded-lg overflow-hidden soft-shadow bg-surface-container-low">
+<img alt="Placa Octagonal" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="An elegant geometric-shaped pet tag in polished silver, featuring deep engraving on an octagonal plate, resting on a pastel blue surface with soft-spring shadows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCg2YbbTgwVsiQIMqsjNvDokOWIih3F4ha7sNa77qHzxxFRIYPCUehLcBxvxdZPIQaa4Pwh-cbSCL4TFFvkeq-E6fYh9fb5hFajZG3D6lE05-ELqc-dBqlfdZGai5V3eZmUh8QHfp9FQxGUpGU4rHLcIiPMwlpylOzR6GHtQpAXZGZ76OBbgaEsEZc5by4SA5nO3vW86xQ-09PHNq6Fg8YLBEyCTfF7vHsmWUcrjReUm91yHeRGgqyIRuKqnZ9-uouyedWOYIailrGM"/>
+</div>
+<div class="text-center md:text-left">
+<h3 class="font-body-lg text-body-lg font-medium text-on-background">Placa Octagonal Elite</h3>
+<p class="font-label-md text-label-md text-secondary font-bold">S/ 48.00</p>
+</div>
+</div>
+<!-- Related Item 3 -->
+<div class="flex flex-col gap-4 group cursor-pointer">
+<div class="aspect-[4/5] rounded-lg overflow-hidden soft-shadow bg-surface-container-low">
+<img alt="Bandana Orgánica" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A stylish pet bandana with a minimalist organic pattern in earthy tones, worn by a happy French Bulldog in a bright airy studio environment with soft shadows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuhcu_hYarC7sz_8U3oEXclic7_03cGnf319ypdkibq2GjoaUFKP0gNfHg168Gn1SY58IxRiAllgvC5V_We_lnvtSZGdeEM7XnCYsRFoOPlmxNmgL9QmZfSUlYBWtmebcpa5jnFctiH_l00lMQHr9f031COv_vjoQRusj_cI-K0KfBosq4vdGFOGphXhUObCBeljz9feUDZBOuWu8bQQB3EbGsOpr5XTDZKfsQ_wNMmqtZVE6rdTFM8sNwovAOSs1v3IAzVukN5hCX"/>
+</div>
+<div class="text-center md:text-left">
+<h3 class="font-body-lg text-body-lg font-medium text-on-background">Bandana Algodón Pima</h3>
+<p class="font-label-md text-label-md text-secondary font-bold">S/ 35.00</p>
+</div>
+</div>
+<!-- Related Item 4 -->
+<div class="flex flex-col gap-4 group cursor-pointer">
+<div class="aspect-[4/5] rounded-lg overflow-hidden soft-shadow bg-surface-container-low">
+<img alt="Placa Corazón" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A personalized heart-shaped pet tag in rose gold finish with delicate diamond-engraved name, placed on a high-texture velvet fabric with premium lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjLqlR1QO0uzgslbVhBWUhDIgdtoeAG4LBTeCUmcaROa6i9NwmN02lkn7m8GrGsu7Rt40YV9lzpiHKn7MQ3JoUymSzWUCz1ULzbIQLjltrEWxYzOstltxLRRGQNIN23Tbmb3FFaRPjZhCIfLLoSMwt_3pMOrtMxWWn6CI7ee8p401MRGYbp_e-7_-FkTV-KbSRf7L_mAtyf4xckiHOQEolURMDyWfyXtUFzsyBYzFOh9asarOPJ7YZV9vUQzztb3_QqeFCE0H_FPTR"/>
+</div>
+<div class="text-center md:text-left">
+<h3 class="font-body-lg text-body-lg font-medium text-on-background">Placa Corazón Rosé</h3>
+<p class="font-label-md text-label-md text-secondary font-bold">S/ 45.00</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-section-gap-mobile md:py-section-gap-desktop px-margin-mobile md:px-20 grid grid-cols-2 md:grid-cols-4 gap-gutter bg-surface-container-lowest rounded-t-xl">
+<div class="col-span-2 md:col-span-1 space-y-6">
+<div class="font-headline-md text-headline-md font-bold text-primary">Patitas de Algodón</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xs">
+                Creamos piezas únicas que celebran el vínculo especial con tu mejor amigo. Lujo, ternura y calidad garantizada.
+            </p>
+</div>
+<div class="space-y-6">
+<h4 class="font-headline-sm text-headline-sm text-on-background font-bold">Comprar</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-all duration-300" href="#">Catálogo</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-all duration-300" href="#">Personalización</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-all duration-300" href="#">Guía de Tallas</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h4 class="font-headline-sm text-headline-sm text-on-background font-bold">Nosotros</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-all duration-300" href="#">Nuestra Historia</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-all duration-300" href="#">Contacto</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-all duration-300" href="#">Envíos</a></li>
+</ul>
+</div>
+<div class="col-span-2 md:col-span-1 space-y-6">
+<h4 class="font-headline-sm text-headline-sm text-on-background font-bold">Síguenos</h4>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-primary hover:scale-110 transition-transform" href="#">
+<span class="material-symbols-outlined">photo_camera</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-primary hover:scale-110 transition-transform" href="#">
+<span class="material-symbols-outlined">play_circle</span>
+</a>
+</div>
+<p class="font-label-md text-label-md text-on-surface-variant pt-4">© 2024 Patitas de Algodón. Lujo y ternura para tus mejores amigos.</p>
+</div>
+</footer>
+<script>
+        function selectMaterial(element) {
+            const buttons = document.querySelectorAll('.material-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('border-primary', 'bg-primary-fixed/20');
+                btn.classList.add('border-transparent', 'bg-surface-container');
+            });
+            element.classList.remove('border-transparent', 'bg-surface-container');
+            element.classList.add('border-primary', 'bg-primary-fixed/20');
+        }
+
+        // Simple observer for scroll effects on navbar
+        const nav = document.querySelector('nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                nav.classList.add('soft-shadow');
+            } else {
+                nav.classList.remove('soft-shadow');
+            }
+        });
+    </script>
+</body></html>

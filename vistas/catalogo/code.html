@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Catálogo | Patitas de Algodón</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-tint": "#be0038",
+                    "on-tertiary-fixed": "#001d33",
+                    "on-surface": "#281718",
+                    "secondary-fixed-dim": "#79d4e2",
+                    "error-container": "#ffdad6",
+                    "on-primary-fixed-variant": "#920029",
+                    "on-secondary": "#ffffff",
+                    "primary": "#ba0037",
+                    "on-secondary-fixed": "#001f24",
+                    "inverse-surface": "#3f2b2c",
+                    "surface-container-highest": "#fbdbdb",
+                    "on-tertiary-container": "#fdfcff",
+                    "on-surface-variant": "#5c3f41",
+                    "outline": "#916f70",
+                    "primary-fixed-dim": "#ffb2b6",
+                    "on-secondary-fixed-variant": "#004f57",
+                    "secondary": "#006874",
+                    "surface-dim": "#f2d2d3",
+                    "surface-container": "#ffe9e9",
+                    "secondary-container": "#93eefc",
+                    "on-tertiary-fixed-variant": "#304961",
+                    "tertiary-fixed-dim": "#afc9e7",
+                    "on-primary": "#ffffff",
+                    "surface": "#fff8f7",
+                    "surface-bright": "#fff8f7",
+                    "secondary-fixed": "#96f0ff",
+                    "on-primary-container": "#fffbff",
+                    "on-error": "#ffffff",
+                    "surface-container-high": "#ffe1e2",
+                    "error": "#ba1a1a",
+                    "tertiary": "#455e78",
+                    "tertiary-fixed": "#cfe5ff",
+                    "outline-variant": "#e5bdbe",
+                    "on-tertiary": "#ffffff",
+                    "inverse-on-surface": "#ffedec",
+                    "on-primary-fixed": "#40000d",
+                    "inverse-primary": "#ffb2b6",
+                    "tertiary-container": "#5e7791",
+                    "on-secondary-container": "#006d79",
+                    "on-background": "#281718",
+                    "primary-fixed": "#ffdadb",
+                    "on-error-container": "#93000a",
+                    "surface-container-low": "#fff0f0",
+                    "surface-variant": "#fbdbdb",
+                    "surface-container-lowest": "#ffffff",
+                    "primary-container": "#e41849",
+                    "background": "#fff8f7"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "section-gap-desktop": "120px",
+                    "margin-mobile": "20px",
+                    "section-gap-mobile": "64px",
+                    "base": "8px",
+                    "gutter": "24px",
+                    "container-max": "1280px"
+            },
+            "fontFamily": {
+                    "display-lg": ["Outfit"],
+                    "headline-md": ["Outfit"],
+                    "headline-lg": ["Outfit"],
+                    "label-md": ["Outfit"],
+                    "display-lg-mobile": ["Outfit"],
+                    "body-lg": ["Outfit"],
+                    "headline-lg-mobile": ["Outfit"],
+                    "body-md": ["Outfit"]
+            },
+            "fontSize": {
+                    "display-lg": ["56px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "label-md": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "display-lg-mobile": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .soft-shadow {
+            shadow-[0_20px_40px_rgba(0,0,0,0.04)];
+        }
+        .bg-blob {
+            position: absolute;
+            z-index: -1;
+            filter: blur(80px);
+            opacity: 0.3;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md shadow-[0_20px_40px_rgba(0,0,0,0.04)]">
+<nav class="flex justify-between items-center px-gutter py-4 max-w-container-max mx-auto">
+<div class="font-display-lg text-display-lg text-primary">Patitas de Algodón</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-primary font-bold border-b-2 border-primary pb-1 font-body-md text-body-md" href="#">Catalog</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Personalize</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">About Us</a>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden lg:flex items-center bg-surface-container rounded-full px-4 py-2">
+<span class="material-symbols-outlined text-on-surface-variant">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-body-md w-32" placeholder="Buscar..." type="text"/>
+</div>
+<button class="material-symbols-outlined text-on-surface-variant hover:scale-105 transition-transform">shopping_bag</button>
+<button class="material-symbols-outlined text-on-surface-variant hover:scale-105 transition-transform">person</button>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-full font-label-md text-label-md hover:scale-105 transition-transform active:scale-95">WhatsApp</button>
+</div>
+</nav>
+</header>
+<main class="pt-24 pb-section-gap-desktop">
+<!-- Hero Banner Section -->
+<section class="relative px-gutter max-w-container-max mx-auto pt-16 pb-section-gap-mobile overflow-hidden">
+<div class="bg-blob w-96 h-96 bg-primary-fixed -top-20 -left-20"></div>
+<div class="bg-blob w-80 h-80 bg-secondary-container bottom-0 -right-10"></div>
+<div class="flex flex-col md:flex-row items-center gap-12">
+<div class="flex-1 space-y-6">
+<h1 class="font-display-lg text-display-lg text-primary">Nuestra Colección</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                        Cada accesorio es una promesa de amor. Diseñamos piezas que capturan la esencia única de tu mejor amigo, transformando su identificación en una joya artesanal para toda la vida.
+                    </p>
+</div>
+<div class="flex-1 w-full max-w-lg">
+<div class="aspect-square rounded-xl overflow-hidden shadow-xl transform rotate-3 hover:rotate-0 transition-transform duration-700">
+<img class="w-full h-full object-cover" data-alt="A lifestyle photography shot of a happy golden retriever sitting gracefully on a cream-colored boucle sofa in a sun-drenched, modern minimalist living room. The dog wears a premium dark brown leather collar with a polished gold circular name tag. The lighting is warm and ethereal, highlighting the soft textures of the fur and the upscale interior design elements." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfVKc-jztDsKeHVzqOG8sGd3bx68_Lij2ZisrmRJsLryLhy_g1tETQSIM193XnRshcbCS86rp7OUcEu_fWI_1v4ne48-6rdj5TTFRt61ckjZpTzCqYH7tyBfMxPBiS0A2iifDqdzpUJGpZodB-_Bf1-EHepo8qN_fxKwXB_8WXtpVMFAPFFmpwsi7cKDHKPmUljoaZQElxC6tH1kUV5ebb9Ybco_gIECoChOMYXRhN_g82EKh28uLQe-wxSxHv-9d4TORDS917xLd9"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Catalog Layout -->
+<section class="px-gutter max-w-container-max mx-auto flex flex-col md:flex-row gap-12">
+<!-- Filters Sidebar -->
+<aside class="w-full md:w-64 space-y-10">
+<div class="space-y-4">
+<h3 class="font-headline-md text-headline-md text-primary">Categoría</h3>
+<ul class="space-y-2">
+<li class="flex items-center gap-2 group cursor-pointer">
+<span class="w-2 h-2 rounded-full bg-primary opacity-0 group-hover:opacity-100 transition-opacity"></span>
+<span class="text-on-surface-variant group-hover:text-primary transition-colors">Placas</span>
+</li>
+<li class="flex items-center gap-2 group cursor-pointer">
+<span class="w-2 h-2 rounded-full bg-primary opacity-0 group-hover:opacity-100 transition-opacity"></span>
+<span class="text-on-surface-variant group-hover:text-primary transition-colors">Collares</span>
+</li>
+<li class="flex items-center gap-2 group cursor-pointer">
+<span class="w-2 h-2 rounded-full bg-primary opacity-0 group-hover:opacity-100 transition-opacity"></span>
+<span class="text-on-surface-variant group-hover:text-primary transition-colors">Dijes</span>
+</li>
+<li class="flex items-center gap-2 group cursor-pointer">
+<span class="w-2 h-2 rounded-full bg-primary opacity-0 group-hover:opacity-100 transition-opacity"></span>
+<span class="text-on-surface-variant group-hover:text-primary transition-colors">Sets</span>
+</li>
+</ul>
+</div>
+<div class="space-y-4">
+<h3 class="font-headline-md text-headline-md text-primary">Material</h3>
+<div class="flex flex-wrap gap-2">
+<button class="px-4 py-2 rounded-full bg-surface-container text-body-md border border-outline-variant hover:bg-secondary-container hover:text-on-secondary-container transition-colors">Acero</button>
+<button class="px-4 py-2 rounded-full bg-surface-container text-body-md border border-outline-variant hover:bg-secondary-container hover:text-on-secondary-container transition-colors">Cuero</button>
+<button class="px-4 py-2 rounded-full bg-surface-container text-body-md border border-outline-variant hover:bg-secondary-container hover:text-on-secondary-container transition-colors">Oro</button>
+</div>
+</div>
+<div class="space-y-4">
+<h3 class="font-headline-md text-headline-md text-primary">Mascota</h3>
+<div class="grid grid-cols-2 gap-4">
+<button class="flex flex-col items-center p-4 rounded-lg bg-surface-container-low hover:bg-primary-fixed transition-colors">
+<span class="material-symbols-outlined text-3xl">pets</span>
+<span class="font-label-md text-label-md">Perro</span>
+</button>
+<button class="flex flex-col items-center p-4 rounded-lg bg-surface-container-low hover:bg-secondary-container transition-colors">
+<span class="material-symbols-outlined text-3xl">pets</span>
+<span class="font-label-md text-label-md">Gato</span>
+</button>
+</div>
+</div>
+</aside>
+<!-- Product Grid -->
+<div class="flex-1">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Product Card 1 -->
+<div class="group bg-surface-container-lowest rounded-lg p-4 transition-all duration-500 hover:shadow-[0_20px_40px_rgba(0,0,0,0.06)] hover:-translate-y-2">
+<div class="relative aspect-[4/5] rounded-lg overflow-hidden mb-4">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A close-up studio shot of a premium circular identification tag made of high-polished silver steel, engraved with the name 'LUCA'. The tag hangs from a handcrafted tan leather collar. The background is a soft pastel yellow with gentle organic shadows, creating a luxury gallery feel. The lighting is diffuse and warm, emphasizing the metallic sheen." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZ94N1uCjaHyD6be2Gp1AFDCh0yE3N_oki6ZIWRBeKtdqAvt2vABmWXiJfsUj5nU0cvUUTM6jgQdo_Vj07Uh478at1hpcryTlCHp9W7e88GvnqiO7XSHRnxc8x6SjtxCKTB9dwqdkqRH0GpVrv9sylltYXpQWeBSQlwUECQfDM3etcgZS5SNHmiTAFHTVYFqp07g8HMxHs22lMwQQAwEVnxPtYolQRAZ_0385nWhMzdbgBlwaPWOjqqj1ES7Z_uWCu50KdSavljyHY"/>
+<span class="absolute top-4 left-4 bg-secondary-fixed text-on-secondary-fixed px-3 py-1 rounded-full font-label-md text-label-md">Personalizable</span>
+</div>
+<div class="text-center space-y-1">
+<h4 class="font-headline-md text-headline-md text-on-surface">Placa Circular Premium</h4>
+<p class="text-secondary font-bold text-body-lg">S/ 45.00</p>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="group bg-surface-container-lowest rounded-lg p-4 transition-all duration-500 hover:shadow-[0_20px_40px_rgba(0,0,0,0.06)] hover:-translate-y-2">
+<div class="relative aspect-[4/5] rounded-lg overflow-hidden mb-4">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A detailed shot of a handcrafted dark brown braided leather collar featuring a custom gold-plated rectangular plate subtly engraved with a pattern. The collar is laid out on a soft, textured cream surface with dramatic, soft sunlight filtering through, creating an atmosphere of luxury and artisanal craftsmanship. The focus is sharp on the leather texture and the gold accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjqLzHoIK6vnrbmtsNHSDpC2K6oGMgQgLwqWJ8OwnuNRhYNZ091E0f1-88H1LDenE4WLnD9ichiUnlerPHyybBVd1VWm9Zm4H-3sdLHJunCc3dgpUNYtsFLa66z7nye8S8_BY9Bv3BFLEjSkzc-d-VKbOfprkQBIEDhqDEjbUWNV6sy2emCgBY7iqs791ADFniog3f_yXrCihihjI1sDuhg_wG_EfWp7uuNpN5Q57zupmgmCH3YXeVH3poTLsEjKWV41NdWMPSP8Cv"/>
+<span class="absolute top-4 left-4 bg-secondary-fixed text-on-secondary-fixed px-3 py-1 rounded-full font-label-md text-label-md">Personalizable</span>
+</div>
+<div class="text-center space-y-1">
+<h4 class="font-headline-md text-headline-md text-on-surface">Collar de Cuero Grabado</h4>
+<p class="text-secondary font-bold text-body-lg">S/ 79.00</p>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="group bg-surface-container-lowest rounded-lg p-4 transition-all duration-500 hover:shadow-[0_20px_40px_rgba(0,0,0,0.06)] hover:-translate-y-2">
+<div class="relative aspect-[4/5] rounded-lg overflow-hidden mb-4">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A minimalist heart-shaped charm in rose gold, hanging delicately from a slim pink leather lead. The charm is engraved with 'CHLOE' in a clean, elegant sans-serif font. The composition is artistic and light-filled, set against a blurred background of a modern living space with warm wood and soft textiles. The mood is affectionate and high-end." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDH81qZRQPA0-YYINH273mCSO5qHC-jWld8Goh6QTXsKRkWXm9Baclbh12SuMvd7ciSgnrOrbVPVTgUXxAFE4e2sbFsm4ovhdig4iywB1Lr_ujijKvXe3L9R4QGj6ZmiiYsoOb9E7B8ZukEH26_BI90BLVc2TMq0-AhFXMn47ijOfDDs9p9JqG8ijDYAWoYUk5vAfVkjKfoosu4sWvzoAtCHVQZOMpS1IRxu4WrBX6FMU2-7iZDGYPbFeLhOog3zAxtqN8lufYoMTHI"/>
+<span class="absolute top-4 left-4 bg-primary-container text-on-primary-container px-3 py-1 rounded-full font-label-md text-label-md">Edición Limitada</span>
+</div>
+<div class="text-center space-y-1">
+<h4 class="font-headline-md text-headline-md text-on-surface">Dije Corazón</h4>
+<p class="text-secondary font-bold text-body-lg">S/ 55.00</p>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="group bg-surface-container-lowest rounded-lg p-4 transition-all duration-500 hover:shadow-[0_20px_40px_rgba(0,0,0,0.06)] hover:-translate-y-2">
+<div class="relative aspect-[4/5] rounded-lg overflow-hidden mb-4">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A complete dog walking set including a matching leather collar, a 5-foot lead, and a waste bag dispenser, all in a sophisticated slate blue color with brass hardware. The set is neatly arranged on a white marble tabletop, surrounded by a few minimalist decor items like a ceramic vase. The lighting is bright and airy, emphasizing the premium quality and unified aesthetic of the set." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuynCRBR2bhoR0zJwDvC1KdPTR2w7y9GwgdYOTH0kk9prcgeKnoPCYvElT2Hh710wDVjlDFwMy4SHDNZfLwx_6VEOxIgWswieAZUtaogZQEgvk5Cfgzkq8t-MGT9rgwKJwHJjk5ItBVfkM9BRGnwZYG9xOqx50WCl4DokdSD-iHOTu1LEb6_belNHTachC5Jc1Be2jNFo6LIDByp1TLzLDsxFYvdvF5Kp4NUlOxcMXL4x6UOZtQNdIPdEpNEOFS9kZhWywjbJV_l0W"/>
+<span class="absolute top-4 left-4 bg-secondary-fixed text-on-secondary-fixed px-3 py-1 rounded-full font-label-md text-label-md">Best Seller</span>
+</div>
+<div class="text-center space-y-1">
+<h4 class="font-headline-md text-headline-md text-on-surface">Set Paseo Elegante</h4>
+<p class="text-secondary font-bold text-body-lg">S/ 120.00</p>
+</div>
+</div>
+<!-- Product Card 5 -->
+<div class="group bg-surface-container-lowest rounded-lg p-4 transition-all duration-500 hover:shadow-[0_20px_40px_rgba(0,0,0,0.06)] hover:-translate-y-2">
+<div class="relative aspect-[4/5] rounded-lg overflow-hidden mb-4">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="An octagon-shaped identification tag in matte brushed steel, engraved with the name 'BELLA'. It is paired with a minimal black nylon collar. The image is captured in a minimalist style with clean lines and a soft gray background. The lighting is cool and professional, showcasing the geometric design and precision of the engraving." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1o1Va2lRi_niDpvQqCol0hzrFEeO7N25paIwTe3vJ-SNFLkGmH_RJpzmtzciqPASd924nvF224oA3H6xEjoxGITEXbpRMoxoMRlXe06lhuIAJ7hbgUmBcLnqMGr6oYcFvWvWfRjoJIJ6K5CnhzdT_RQOhhqcmn-MRU5tuCYJ1bxFHw4bfxbo2Fa3HGglEFihwqpNBMRYzLslfx7yjltP0uJlZd_CudsN_lIIgJ8TAaq2t57lSaQux3Rh804XxlhACRwXhAdzAogm-"/>
+<span class="absolute top-4 left-4 bg-secondary-fixed text-on-secondary-fixed px-3 py-1 rounded-full font-label-md text-label-md">Personalizable</span>
+</div>
+<div class="text-center space-y-1">
+<h4 class="font-headline-md text-headline-md text-on-surface">Placa Hexagonal</h4>
+<p class="text-secondary font-bold text-body-lg">S/ 45.00</p>
+</div>
+</div>
+<!-- Product Card 6 -->
+<div class="group bg-surface-container-lowest rounded-lg p-4 transition-all duration-500 hover:shadow-[0_20px_40px_rgba(0,0,0,0.06)] hover:-translate-y-2">
+<div class="relative aspect-[4/5] rounded-lg overflow-hidden mb-4">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A charming small charm in the shape of a fluffy dog's paw, made from high-quality white enamel with rose gold edges. The charm hangs from a cat's collar made of soft pink velvet. The setting is a cozy corner of a home with soft pillows and warm indoor light. The focus is on the delicate details and the 'squishy' luxury feel of the accessory." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtqWlko3bkVoVO6Pcq87RF0eRdDQtAnikQXpsYlUNJXzPQFDoCLbhJMCIaEuXXS4qbc-jCkoeJzjtqCr3mS2cE3V9m6V-oeJOffgxOnDOrSaQ0RAAQ-4DWnlnk2h3ZrTlEpqbBmOAu01R3ghRyAsP6AEY7FNRJLVSLXdXyHoVkCzDjaIyzlb3dbCaLVtZ6WYn_Wv7WnPxRThkUyDLPKRc13phpY2ZHXQvj1xBbiJrIDJj1pHuClQbVrRSveVtU4jHmpoSlmULn3aft"/>
+<span class="absolute top-4 left-4 bg-primary-fixed text-on-primary-fixed px-3 py-1 rounded-full font-label-md text-label-md">New</span>
+</div>
+<div class="text-center space-y-1">
+<h4 class="font-headline-md text-headline-md text-on-surface">Dije Huella de Algodón</h4>
+<p class="text-secondary font-bold text-body-lg">S/ 39.00</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full rounded-t-lg bg-surface-container-low mt-24">
+<div class="flex flex-col md:flex-row justify-between items-start gap-section-gap-mobile md:gap-section-gap-desktop px-gutter py-16 max-w-container-max mx-auto">
+<div class="space-y-4 max-w-sm">
+<div class="font-headline-lg text-headline-lg text-primary">Patitas de Algodón</div>
+<p class="text-on-surface-variant text-body-md">Creamos piezas únicas para miembros de la familia únicos. Calidad artesanal y diseño emocional en cada detalle.</p>
+<div class="flex gap-4">
+<button class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-primary hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">share</span>
+</button>
+<button class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-primary hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">mail</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-2 gap-12">
+<div class="space-y-4">
+<h5 class="font-label-md text-label-md text-primary uppercase tracking-widest">Empresa</h5>
+<ul class="space-y-2">
+<li><a class="text-on-surface-variant hover:text-primary transition-colors text-body-md" href="#">About Us</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors text-body-md" href="#">Contact</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors text-body-md" href="#">Shipping Info</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h5 class="font-label-md text-label-md text-primary uppercase tracking-widest">Legal</h5>
+<ul class="space-y-2">
+<li><a class="text-on-surface-variant hover:text-primary transition-colors text-body-md" href="#">Privacy Policy</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors text-body-md" href="#">Terms of Service</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="px-gutter py-8 border-t border-outline-variant max-w-container-max mx-auto text-center md:text-left">
+<p class="text-on-surface-variant text-body-md">© 2024 Patitas de Algodón. Handmade with love for your best friend.</p>
+</div>
+</footer>
+<!-- FAB for quick contact -->
+<button class="fixed bottom-8 right-8 bg-primary text-on-primary w-14 h-14 rounded-full shadow-lg flex items-center justify-center hover:scale-110 transition-transform z-40 active:scale-95">
+<span class="material-symbols-outlined">chat</span>
+</button>
+<script>
+        // Soft hover effect logic could go here if more complex than CSS
+        document.querySelectorAll('.group').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                // Potential micro-interaction code
+            });
+        });
+    </script>
+</body></html>

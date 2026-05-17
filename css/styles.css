@@ -1,0 +1,448 @@
+/* ==========================================
+   PATITAS DE ALGODÓN - CUSTOM STYLES
+   Following calvy-landing pattern with Bodoni Moda typography
+   ========================================== */
+
+/* ========== GOOGLE FONTS ========== */
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;0,6..96,700;1,6..96,400;1,6..96,500;1,6..96,600;1,6..96,700&display=swap');
+
+/* ========== MATERIAL SYMBOLS ========== */
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap');
+
+/* ========== DESIGN TOKENS (CSS Variables) ========== */
+:root {
+  /* Colors */
+  --c-primary: #ba0037;
+  --c-secondary: #006874;
+  --c-surface: #fff8f7;
+  --c-on-surface: #281718;
+
+  /* Shadows */
+  --shadow-ambient: 0px 20px 40px rgba(0,0,0,0.04);
+  --shadow-ambient-lg: 0px 30px 60px rgba(0,0,0,0.06);
+
+  /* Transitions */
+  --transition-smooth: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-spring: 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* ========== RESET / BASE ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Bodoni Moda', serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--c-on-surface);
+  background-color: var(--c-surface);
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ========== MATERIAL SYMBOLS CONFIGURATION ========== */
+.material-symbols-outlined {
+  font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
+  user-select: none;
+}
+
+.badge-icon {
+  font-size: 28px;
+  font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+  color: var(--c-primary);
+}
+
+.badge-icon-white {
+  font-size: 28px;
+  font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+  color: #ffffff;
+}
+
+.badge-circle {
+  background-color: var(--c-primary);
+}
+
+.hero-badge-position {
+  bottom: -1.5rem;
+  left: 0.375rem;
+}
+
+.section-spacing-top {
+  margin-top: 50px;
+}
+
+.bg-features {
+  background-color: #F9F9B5;
+}
+
+.features-padding {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+@media (min-width: 768px) {
+  .features-padding {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+/* ========== NAVIGATION ========== */
+#main-nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: all var(--transition-smooth);
+}
+
+#main-nav .logo-text {
+  color: var(--c-primary);
+}
+
+.scrolled-header {
+  background-color: rgba(255, 248, 247, 0.95) !important;
+  box-shadow: var(--shadow-ambient);
+}
+
+.nav-link {
+  position: relative;
+  padding: 0.5rem 0;
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--c-on-surface);
+  transition: color var(--transition-smooth);
+}
+
+.nav-link:hover {
+  color: var(--c-primary);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: var(--c-primary);
+  transition: width var(--transition-smooth);
+  border-radius: 2px;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-link.active {
+  color: var(--c-primary);
+  font-weight: 600;
+}
+
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* Hamburger menu */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: all var(--transition-smooth);
+}
+
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: var(--c-on-surface);
+  transition: all var(--transition-smooth);
+}
+
+.hamburger.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Mobile menu */
+#mobile-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 248, 247, 0.98);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(145, 111, 112, 0.1);
+  box-shadow: var(--shadow-ambient-lg);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--transition-smooth);
+}
+
+#mobile-menu.open {
+  max-height: 400px;
+}
+
+/* ========== BUTTONS ========== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 2rem;
+  font-family: 'Bodoni Moda', serif;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: all var(--transition-spring);
+  border: 2px solid transparent;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn-primary {
+  background-color: var(--c-primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #e41849;
+  box-shadow: 0 8px 24px rgba(186, 0, 55, 0.3);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--c-primary);
+  border-color: var(--c-primary);
+}
+
+.btn-outline:hover {
+  background-color: var(--c-primary);
+  border-color: var(--c-primary);
+  color: white;
+}
+
+.btn-secondary {
+  background-color: var(--c-secondary);
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: #006d79;
+  box-shadow: 0 8px 24px rgba(0, 104, 116, 0.3);
+}
+
+/* ========== HERO STYLES ========== */
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1.25rem;
+  background: linear-gradient(135deg, rgba(186, 0, 55, 0.1), rgba(0, 104, 116, 0.1));
+  border: 1px solid rgba(186, 0, 55, 0.2);
+  border-radius: 9999px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--c-primary);
+}
+
+.hero-image-wrap {
+  position: relative;
+  border-radius: 3rem;
+  overflow: hidden;
+  transition: transform var(--transition-smooth);
+}
+
+.hero-image-wrap img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform var(--transition-smooth);
+}
+
+.hero-image-wrap:hover img {
+  transform: scale(1.05);
+}
+
+/* ========== CARD STYLES ========== */
+.feature-card {
+  text-align: center;
+  padding: 1rem;
+  transition: all var(--transition-smooth);
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+}
+
+.feature-icon-circle {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 0.75rem;
+}
+
+.feature-card .material-symbols-outlined {
+  font-size: 28px;
+  color: var(--c-primary);
+}
+
+.product-card {
+  position: relative;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all var(--transition-smooth);
+  background-color: var(--c-surface-container-low, #fff0f0);
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-ambient-lg);
+}
+
+.product-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-smooth);
+}
+
+.product-card:hover img {
+  transform: scale(1.08);
+}
+
+.product-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  color: white;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* ========== ORGANIC BLOBS ========== */
+.organic-blob {
+  position: absolute;
+  z-index: -1;
+  filter: blur(80px);
+  opacity: 0.4;
+  pointer-events: none;
+  border-radius: 100%;
+}
+
+.bg-blob {
+  position: absolute;
+  z-index: -1;
+  filter: blur(80px);
+  opacity: 0.3;
+  border-radius: 50%;
+}
+
+/* ========== SHADOW UTILITIES ========== */
+.soft-shadow {
+  box-shadow: var(--shadow-ambient);
+}
+
+.ambient-shadow {
+  box-shadow: var(--shadow-ambient-lg);
+}
+
+/* ========== ANIMATIONS ========== */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-delay-1 {
+  transition-delay: 0.15s;
+}
+
+.reveal-delay-2 {
+  transition-delay: 0.3s;
+}
+
+.reveal-delay-3 {
+  transition-delay: 0.45s;
+}
+
+/* Utility transitions */
+.scroll-smooth {
+  scroll-behavior: smooth;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* ========== FOOTER ========== */
+footer {
+  background-color: var(--c-surface-container-lowest, #ffffff);
+  border-top: 1px solid var(--c-outline-variant, #e5bdbe);
+}
+
+footer a:hover {
+  color: var(--c-primary);
+  transition: color var(--transition-smooth);
+}
