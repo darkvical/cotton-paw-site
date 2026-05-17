@@ -243,6 +243,14 @@ a {
   color: var(--c-primary);
 }
 
+#main-nav img {
+  height: 60px;
+}
+
+footer img[alt="Logo"] {
+  height: 64px !important;
+}
+
 .scrolled-header {
   background-color: rgba(255, 248, 247, 0.95) !important;
   box-shadow: var(--shadow-ambient);
