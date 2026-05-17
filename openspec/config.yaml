@@ -27,10 +27,14 @@ rules:
     - SOLO usar colores definidos en js/tailwind.config.js (NO inventar colores hex)
     - Consultar paleta completa en tailwind.config.js antes de elegir colores
     - SOLO usar Material Symbols (Google Fonts) - NO Font Awesome, Heroicons, MUI components, etc.
+    - SIEMPRE diseñar responsive (mobile first - testear en 320px, 640px, 768px, 1024px, 1440px)
   tasks:
     - Nuevas vistas HTML DEBEN incluir header-placeholder y footer-placeholder
     - Siempre incluir js/main.js al final del body
     - SOLO usar clases de color de Tailwind del proyecto (text-primary, bg-secondary, etc.)
     - Para iconos usar ÚNICAMENTE Material Symbols con clase .material-symbols-outlined
+    - TODO código DEBE ser responsive con múltiples breakpoints (sm, md, lg, xl)
+    - Testear SIEMPRE en móvil primero antes de considerar completo
   specs:
     - Nuevas páginas deben seguir patrón de componentes compartidos
+    - Todas las specs deben incluir consideraciones responsive

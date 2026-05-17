@@ -21,6 +21,57 @@ E-commerce de accesorios premium personalizados para mascotas. Placas grabadas, 
 - **Material Symbols Outlined**: Iconografía de Google (NO usar otros icon sets)
 - **Vanilla JavaScript**: Código modular en `js/main.js`
 
+## ⚠️ REGLA CRÍTICA: Responsive Design Obligatorio
+
+**TODA implementación, ajuste o desarrollo DEBE considerar diseño responsive desde el inicio.**
+
+### Breakpoints del Proyecto
+
+```css
+/* Mobile First Approach */
+/* Default: 0-639px (Mobile) */
+
+@media (min-width: 640px)  /* sm - Tablet pequeña */
+@media (min-width: 768px)  /* md - Tablet */
+@media (min-width: 1024px) /* lg - Desktop */
+@media (min-width: 1280px) /* xl - Desktop grande */
+```
+
+### Reglas de Responsive
+
+1. **Mobile First**: Diseñar primero para móvil, luego escalar hacia arriba
+2. **Testear en múltiples tamaños**: 320px (móvil pequeño), 640px, 768px, 1024px, 1440px
+3. **Spacing adaptable**: Padding, margin, gaps deben tener versiones móvil y desktop
+4. **Typography responsive**: Tamaños de fuente deben ajustarse por breakpoint
+5. **Grid responsive**: Siempre usar grid con columnas adaptables
+
+### Ejemplo de Implementación Correcta
+
+```html
+<!-- Grid adaptable -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 md:gap-6">
+
+<!-- Padding adaptable -->
+<section class="px-4 md:px-8 lg:px-20">
+
+<!-- Typography adaptable -->
+<h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
+```
+
+### ❌ NO Hacer
+- **NO** usar tamaños fijos sin media queries
+- **NO** asumir que todos usan desktop
+- **NO** olvidar testear en móvil
+- **NO** usar solo `md:` breakpoint (usar mobile first)
+
+### ✅ SÍ Hacer
+- **SÍ** testear SIEMPRE en móvil primero
+- **SÍ** usar múltiples breakpoints (sm, md, lg)
+- **SÍ** hacer spacing adaptable
+- **SÍ** considerar touch targets en móvil (mínimo 44px)
+
+---
+
 ## ⚠️ REGLA CRÍTICA: Arquitectura de Componentes Compartidos
 
 ### Componentes Centralizados
